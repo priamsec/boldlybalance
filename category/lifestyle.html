@@ -1,138 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://boldly-balanced.vercel.app/"
-      }, {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Sleep",
-        "item": "https://boldly-balanced.vercel.app/category/sleep.html"
-      }]
-    }
-    </script>
-    <!-- CollectionPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Sleep | Boldly Balanced",
-      "description": "Explore our sleep articles and guides for a healthier, balanced life.",
-      "url": "https://boldly-balanced.vercel.app/category/sleep.html"
-    }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleep | Boldly Balanced</title>
-    <link rel="canonical" href="https://boldly-balanced.vercel.app/category/sleep.html">
-    <meta name="description" content="Lifestyle articles on modern living, productivity, habits, and creating a balanced life you love.">
-    <meta property="og:title" content="Sleep | Boldly Balanced">
-    <meta property="og:description" content="Lifestyle articles on modern living, productivity, habits, and creating a balanced life you love.">
+    <title>Lifestyle | Boldly Balanced</title>
+    <link rel="canonical" href="https://boldly-balanced.vercel.app/category/lifestyle.html">
+    <meta name="description" content="Explore our Lifestyle articles and guides for a healthier, balanced life.">
+    <meta property="og:title" content="Lifestyle | Boldly Balanced">
+    <meta property="og:description" content="Explore our Lifestyle articles and guides for a healthier, balanced life.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://boldly-balanced.vercel.app/category/sleep.html">
+    <meta property="og:url" content="https://boldly-balanced.vercel.app/category/lifestyle.html">
     <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sleep | Boldly Balanced">
-    <meta name="twitter:description" content="Improve sleep quality with science-backed tips. Master recovery and rest for better health.">
+    <meta name="twitter:title" content="Lifestyle | Boldly Balanced">
+    <meta name="twitter:description" content="Explore our Lifestyle articles and guides for a healthier, balanced life.">
     <link rel="stylesheet" href="../styles.css">
-</head>
+    <script>
+        const categorySlug = "lifestyle";
+        const categoryName = "Lifestyle";
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <a href="../" class="logo">Boldly Balanced</a>
             <div class="nav-links">
-                <a href="../">Home</a>
+                <div class="dropdown">
+                    <a href="../">Home ▾</a>
+                    <div class="dropdown-content">
+                        <a href="../category/fitness.html">Fitness</a>
+                        <a href="../category/nutrition.html">Nutrition</a>
+                        <a href="../category/sleep.html">Sleep</a>
+                        <a href="../category/mind.html">Mind</a>
+                        <a href="../category/wellness.html">Wellness</a>
+                        <a href="../category/lifestyle.html">Lifestyle</a>
+                        <a href="../category/tech.html">Tech</a>
+                        <a href="../category/recovery.html">Recovery</a>
+                        <a href="../category/finance.html">Finance</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="hero" style="padding: 3rem 2rem;">
-            <h1>Lifestyle</h1>
-            <p>Browse all Lifestyle articles.</p>
+            <h1 id="cat-title">Loading...</h1>
+            <p>Browse all <span id="cat-name">CATEGORY</span> articles.</p>
         </section>
         <section class="posts">
-            <div class="post-grid">
-                <a href="../posts/deep-work-focus.html" class="post-card">
-                    <div class="post-card-image"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80" alt="Deep Work cover"></div>
-                    <div class="post-card-content"><span class="tag">Lifestyle</span><h3>Deep Work: The Skill That Separates Good from Great</h3><p>The ability to focus without distraction is your competitive advantage.</p></div>
-                </a>
-                <a href="../posts/health-raves-2026.html" class="post-card">
-                    <div class="post-card-image">
-                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80" alt="">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="tag">Lifestyle</span>
-                        <h3>Health Raves: The New Way to Workout</h3>
-                        <p>Sober morning dance events and wellness festivals. Here is what the health rave movement is about.</p>
-                    </div>
-                </a>
-                <a href="../posts/deep-work-focus.html" class="post-card">
-                    <div class="post-card-image"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80" alt="Deep Work cover"></div>
-                    <div class="post-card-content"><span class="tag">Lifestyle</span><h3>Deep Work: The Skill That Separates Good from Great</h3><p>The ability to focus without distraction is your competitive advantage.</p></div>
-                </a>
-                <a href="../posts/social-wellness-deep-connections.html" class="post-card">
-                    <div class="post-card-image">
-                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80" alt="">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="tag">Lifestyle</span>
-                        <h3>Social Wellness: Building Deep Connections</h3>
-                        <p>Loneliness increases mortality risk by 26-29%. Discover actionable strategies to build meaningful relationships.</p>
-                    </div>
-                </a>
-                <a href="../posts/deep-work-focus.html" class="post-card">
-                    <div class="post-card-image"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80" alt="Deep Work cover"></div>
-                    <div class="post-card-content"><span class="tag">Lifestyle</span><h3>Deep Work: The Skill That Separates Good from Great</h3><p>The ability to focus without distraction is your competitive advantage.</p></div>
-                </a>
-                <a href="../posts/analog-lifestyle-digital-detox-2026.html" class="post-card">
-                    <div class="post-card-image">
-                        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=80" alt="">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="tag">Lifestyle</span>
-                        <h3>The Analog Lifestyle: Digital Detox for 2026</h3>
-                        <p>Reclaim your time and attention. Discover 10 actionable analog activities that replace doomscrolling.</p>
-                    </div>
-                </a>
-                <a href="../posts/deep-work-focus.html" class="post-card">
-                    <div class="post-card-image"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80" alt="Deep Work cover"></div>
-                    <div class="post-card-content"><span class="tag">Lifestyle</span><h3>Deep Work: The Skill That Separates Good from Great</h3><p>The ability to focus without distraction is your competitive advantage.</p></div>
-                </a>
-                <a href="../posts/minimalist-morning.html" class="post-card">
-                    <div class="post-card-image">
-                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80" alt="">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="tag">Lifestyle</span>
-                        <h3>The Minimalist Morning</h3>
-                    </div>
-                </a>
-                <a href="../posts/deep-work-focus.html" class="post-card">
-                    <div class="post-card-image"><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80" alt="Deep Work cover"></div>
-                    <div class="post-card-content"><span class="tag">Lifestyle</span><h3>Deep Work: The Skill That Separates Good from Great</h3><p>The ability to focus without distraction is your competitive advantage.</p></div>
-                </a>
-                <a href="../posts/women-sports-economy.html" class="post-card">
-                    <div class="post-card-image">
-                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&q=80" alt="">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="tag">Lifestyle</span>
-                        <h3>Women & Sports: The Economic Revolution</h3>
-                    </div>
-                </a>
-
+            <div class="post-grid" id="category-posts">
             </div>
         </section>
     </main>
     <footer>
         <p>© 2026 Boldly Balanced.</p>
     </footer>
+    <script>
+        async function loadCategoryPosts() {
+            try {
+                const response = await fetch('../posts.json');
+                const allPosts = await response.json();
+                const categoryPosts = allPosts.filter(p => p.category === categoryName);
+                categoryPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                document.getElementById('cat-title').textContent = categoryName;
+                document.title = categoryName + ' | Boldly Balanced';
+                const container = document.getElementById('category-posts');
+                if (categoryPosts.length === 0) {
+                    container.innerHTML = '<p>No articles in this category yet.</p>';
+                    return;
+                }
+                container.innerHTML = categoryPosts.map(post => `
+                    <a href="../posts/${post.slug}.html" class="post-card">
+                        <div class="post-card-image">
+                            <img loading="lazy" src="https://images.unsplash.com/${post.image}?w=1200&q=80" alt="${post.title} cover">
+                        </div>
+                        <div class="post-card-content">
+                            <span class="tag">${post.category}</span>
+                            <h3>${post.title}</h3>
+                            <p>${post.excerpt}</p>
+                            <span class="read-more">Read more</span>
+                        </div>
+                    </a>
+                `).join('');
+            } catch (e) {
+                console.error('Error loading posts:', e);
+            }
+        }
+        loadCategoryPosts();
+    </script>
 </body>
 </html>

@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech | Boldly Balanced</title>
-    <link rel="canonical" href="https://boldly-balanced.vercel.app/category/tech.html">
-    <meta name="description" content="Explore our Tech articles and guides for a healthier, balanced life.">
-    <meta property="og:title" content="Tech | Boldly Balanced">
-    <meta property="og:description" content="Explore our Tech articles and guides for a healthier, balanced life.">
+    <title>CATEGORY_NAME | Boldly Balanced</title>
+    <link rel="canonical" href="https://boldly-balanced.vercel.app/category/CATEGORY_SLUG.html">
+    <meta name="description" content="Explore our CATEGORY_NAME articles and guides for a healthier, balanced life.">
+    <meta property="og:title" content="CATEGORY_NAME | Boldly Balanced">
+    <meta property="og:description" content="Explore our CATEGORY_NAME articles and guides for a healthier, balanced life.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://boldly-balanced.vercel.app/category/tech.html">
+    <meta property="og:url" content="https://boldly-balanced.vercel.app/category/CATEGORY_SLUG.html">
     <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tech | Boldly Balanced">
-    <meta name="twitter:description" content="Explore our Tech articles and guides for a healthier, balanced life.">
+    <meta name="twitter:title" content="CATEGORY_NAME | Boldly Balanced">
+    <meta name="twitter:description" content="Explore our CATEGORY_NAME articles and guides for a healthier, balanced life.">
     <link rel="stylesheet" href="../styles.css">
     <script>
-        const categorySlug = "tech";
-        const categoryName = "Tech";
+        // Get category from filename
+        const categorySlug = "CATEGORY_SLUG";
+        const categoryName = "CATEGORY_NAME";
     </script>
 </head>
 <body>
@@ -49,6 +50,7 @@
         </section>
         <section class="posts">
             <div class="post-grid" id="category-posts">
+                <!-- Loaded from JSON -->
             </div>
         </section>
     </main>
@@ -60,15 +62,24 @@
             try {
                 const response = await fetch('../posts.json');
                 const allPosts = await response.json();
+                
+                // Filter by category
                 const categoryPosts = allPosts.filter(p => p.category === categoryName);
+                
+                // Sort by date descending
                 categoryPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                // Update title
                 document.getElementById('cat-title').textContent = categoryName;
                 document.title = categoryName + ' | Boldly Balanced';
+                
+                // Render posts
                 const container = document.getElementById('category-posts');
                 if (categoryPosts.length === 0) {
                     container.innerHTML = '<p>No articles in this category yet.</p>';
                     return;
                 }
+                
                 container.innerHTML = categoryPosts.map(post => `
                     <a href="../posts/${post.slug}.html" class="post-card">
                         <div class="post-card-image">
