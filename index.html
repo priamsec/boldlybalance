@@ -120,10 +120,12 @@
             }
         }
 
-        // Render carousel (first 10 posts)
+        // Render carousel (newest 10 posts by date)
         function renderCarousel() {
             const track = document.getElementById('carousel-track');
-            const carouselPosts = posts.slice(0, 10);
+            // Sort by date descending (newest first), then take 10
+            const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+            const carouselPosts = sortedPosts.slice(0, 10);
             track.innerHTML = carouselPosts.map(post => `
                 <a href="posts/${post.slug}.html" class="carousel-card">
                     <img src="https://images.unsplash.com/${post.image}?w=1200&q=80" alt="${post.title} cover">
@@ -135,10 +137,12 @@
             `).join('');
         }
 
-        // Render latest this week (first 8 posts, excluding carousel)
+        // Render latest this week (newest 8 posts by date)
         function renderLatest() {
             const container = document.getElementById('latest-posts');
-            const latestPosts = posts.slice(0, 8);
+            // Sort by date descending (newest first), then take 8
+            const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+            const latestPosts = sortedPosts.slice(0, 8);
             container.innerHTML = latestPosts.map(post => `
                 <a href="posts/${post.slug}.html" class="post-card">
                     <div class="post-card-image">
