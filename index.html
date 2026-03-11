@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boldly Balance | Modern Lifestyle Blog</title>
     <link rel="canonical" href="https://boldlybalance.life/">
-    <meta name="description" content="Your guide to modern living. Fitness, mindfulness, habits, productivity, and lifestyle.">
+    <meta name="description" content="Boldly Balance empowers you to upgrade daily living with practical tips on fitness, mindfulness, productivity, and sustainable lifestyle choices for a calmer, more focused life.">
     <meta property="og:title" content="Boldly Balance | Modern Lifestyle Blog">
-    <meta property="og:description" content="Your guide to modern living. Fitness, mindfulness, habits, productivity, and lifestyle.">
+    <meta property="og:description" content="Boldly Balance empowers you to upgrade daily living with practical tips on fitness, mindfulness, productivity, and sustainable lifestyle choices for a calmer, more focused life.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://boldlybalance.life/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Boldly Balance | Modern Lifestyle Blog">
-    <meta name="twitter:description" content="Your guide to modern living. Fitness, mindfulness, habits, productivity, and lifestyle.">
+    <meta name="twitter:description" content="Boldly Balance empowers you to upgrade daily living with practical tips on fitness, mindfulness, productivity, and sustainable lifestyle choices for a calmer, more focused life.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop">
     <link rel="stylesheet" href="styles.css">
     <!-- FAQ Schema for AEO -->
@@ -122,6 +122,11 @@
                 <button id="show-more-btn" onclick="showMoreArticles()" style="padding:0.8rem 2rem;background:var(--primary);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:1rem;font-weight:600;">Show More Articles</button>
             </div>
         </section>
+
+        <!-- Article Schema for Posts (auto-injected by dedicated script) -->
+        <script>
+        // No-op; this space will be populated by add-article-schema.js when run in build/deploy.
+        </script>
 
         <!-- FAQ Section for AEO -->
         <section class="faq-section" style="padding:3rem 2rem;max-width:800px;margin:0 auto;">
@@ -246,7 +251,6 @@
             const container = document.getElementById('all-articles');
             const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
             const postsToShow = sortedPosts.slice(0, displayedArticles);
-            
             container.innerHTML = postsToShow.map(post => `
                 <a href="posts/${post.slug}.html" class="post-card">
                     <div class="post-card-image">

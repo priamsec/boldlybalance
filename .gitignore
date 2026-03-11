@@ -1,1 +1,14 @@
 scripts/
+
+# Internal documentation and configs - DO NOT COMMIT
+*.md
+keyword-research*
+seo-audit*
+seo_jsonld*
+automation.yaml
+.git-credentials
+.env
+env/
+shared/
+docs/
+
