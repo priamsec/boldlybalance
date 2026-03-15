@@ -2,12 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://boldlybalance.life/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
 <url><loc>https://boldlybalance.life/category/fitness.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://boldlybalance.life/category/home-decor.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://boldlybalance.life/category/technology.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/food.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/sleep.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/mind.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/wellness.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/lifestyle.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://boldlybalance.life/category/tech.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/recovery.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/finance.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://boldlybalance.life/category/mindset.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
